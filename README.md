@@ -1,7 +1,24 @@
-# poc-customer
+<h1 align="center">
+  <br>
+  <br>
+  POC-CUSTOMER
+  <br>
+</h1>
 
-## Prerequisites
+<p align="center">
+  <a href="#Architecture">Architecture</a> •
+  <a href="#Getting Started">Getting Started</a> •
+  <a href="#reference-documentation">Reference Documentation</a> •
+   <a href="#license">License</a>
+</p>
 
+
+## Architecture
+...
+
+# Getting Started
+## Set up your development environment
+To run this functions locally with Java, install the following software:
 * [Git](https://git-scm.com)
 * [Java 11](https://www.java.com)
 * [SpringBoot](https://spring.io/projects/spring-boot)
@@ -9,21 +26,18 @@
 * [Docker](https://www.docker.com/products/docker-desktop)
 * [Kafka](https://kafka.apache.org/)
 
-## Diagrama
-![image](https://user-images.githubusercontent.com/82905537/126642075-728a07f5-1471-4be8-af35-8fa68502b740.png)
+### IntelliJ IDEA
+### Run
+1. Import changes manually or enable auto import.
+2. Configure the application
+3. Edit Configurations ... and set Spring Boot Profile (optional)
+4. Run 'PocCustomerApplication'
 
-## Running the application locally ###
-
-There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `br.com.digio.platform.customer.Application` class from your IDE.
-
-- Download the zip or clone the Git repository.
-- Unzip the zip file (if you downloaded one)
-- Open Command Prompt and Change directory (cd) to folder containing pom.xml
-- Open Eclipse
-  - File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
-  - Select the project
-- Choose the Spring Boot Application file (search for @SpringBootApplication)
-- Right Click on the file and Run as Java Application
+### Debug
+1. Import changes manually or enable auto import.
+2. Configure the application
+3. Edit Configurations ... and set Spring Boot Profile (optional)
+4. Debug 'PocCustomerApplication'
 
 Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
@@ -31,6 +45,20 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 mvn spring-boot:run
 ```
 
+# Reference Documentation
+For further reference, please consider the following sections:
+
+* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
+* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.3.0.RELEASE/maven-plugin/reference/html/)
+* [Spring Messaging Kafka](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/#messaging.kafka)
+* [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/#actuator)
+* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/#data.sql.jpa-and-spring-data)
+* [Spring Web](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/#web)
+* [Validation](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/#io.validation)
+
+# License
+
+This code is distributed under the Apache License 2.0. See the LICENSE.txt file for more info.
 
 ## Authors
 See also the list of [contributors](https://github.com/jvnobrega/poc-customer/graphs/contributors) who participated in this project.
