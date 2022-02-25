@@ -13,13 +13,8 @@
 </p>
 
 
-
 ## Architecture
-<div align="center">
-  <br>
-  <img width="70%" alt="architecture" src="https://user-images.githubusercontent.com/5182893/155738923-8c9dc14b-946d-4cd5-bb4c-e2b60248bdd6.png">
-  <br>
-</div>
+![Architecture](https://user-images.githubusercontent.com/5182893/155738923-8c9dc14b-946d-4cd5-bb4c-e2b60248bdd6.png)
 
 
 # Getting Started
