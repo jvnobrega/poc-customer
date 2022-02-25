@@ -1,33 +1,36 @@
-# Working with Databases in Java
-- JDBC
-- Datasource
-- Connection Pool
-- Flyway and JDBC Template
+# poc-customer
 
-# Diagram
-![diagram](https://user-images.githubusercontent.com/40702606/132997719-73170303-30a6-499b-9c59-4143ba0f8439.png)
+## Prerequisites
 
-# How to get started
-- switch to branch `git checkout start`
-- watch YouTube video
+* [Git](https://git-scm.com)
+* [Java 11](https://www.java.com)
+* [SpringBoot](https://spring.io/projects/spring-boot)
+* [Maven](https://maven.apache.org/)
+* [Docker](https://www.docker.com/products/docker-desktop)
+* [Kafka](https://kafka.apache.org/)
 
-# Exercise
-- Add the ability to edit movies
-- Add `actor` table and associate them with movies
-  You will need to create a new migration called: `V1__ActorTable.sql` and the following sql to create the actor table
-```sql
-CREATE TABLE actor
-(
-    id    bigserial primary key,
-    name  TEXT NOT NULL,
-    movie bigint REFERENCES movie (id),
-    unique (name, movie)
-);
+## Diagrama
+![image](https://user-images.githubusercontent.com/82905537/126642075-728a07f5-1471-4be8-af35-8fa68502b740.png)
+
+## Running the application locally ###
+
+There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `br.com.digio.platform.customer.Application` class from your IDE.
+
+- Download the zip or clone the Git repository.
+- Unzip the zip file (if you downloaded one)
+- Open Command Prompt and Change directory (cd) to folder containing pom.xml
+- Open Eclipse
+  - File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
+  - Select the project
+- Choose the Spring Boot Application file (search for @SpringBootApplication)
+- Right Click on the file and Run as Java Application
+
+Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
+
+```shell
+mvn spring-boot:run
 ```
 
-# Join the community
-<p>
-    <a href="https://discord.com/invite/S7gXXxq8" alt="Contributors">
-        <img src="https://img.shields.io/discord/699965319883784252" />
-    </a>
-</p>
+
+## Authors
+See also the list of [contributors](https://github.com/jvnobrega/poc-customer/graphs/contributors) who participated in this project.
