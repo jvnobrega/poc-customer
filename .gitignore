@@ -54,6 +54,16 @@ cmake-build-*/
 *.iws
 
 # IntelliJ
+#Intellij
+.idea
+*.iml
+.DS_Store
+target/
+*.log
+*.patch
+logs/
+native/
+.java-version
 out/
 
 # mpeltonen/sbt-idea plugin
@@ -145,17 +155,9 @@ replay_pid*
 .DS_Store
 .AppleDouble
 .LSOverride
-*.idea
-*.iml
-*.swp
-target/
-.settings
-.classpath
-.project
 
 # Icon must end with two \r
 Icon
-
 
 # Thumbnails
 ._*
