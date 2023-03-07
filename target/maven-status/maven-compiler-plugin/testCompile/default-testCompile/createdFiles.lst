@@ -1,2 +1,3 @@
 com/nobrega/poc/customer/domain/CustomerServiceTest.class
-com/nobrega/poc/customer/intregation/CustomerIntegrationTests.class
+com/nobrega/poc/customer/application/component/MockMvcWithSpringBootTest.class
+com/nobrega/poc/customer/application/intregation/CustomerIntegrationTests.class

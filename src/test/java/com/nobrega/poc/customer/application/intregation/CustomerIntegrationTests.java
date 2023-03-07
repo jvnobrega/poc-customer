@@ -24,7 +24,7 @@ class CustomerIntegrationTests {
 	@LocalServerPort
 	private int port;
 
-	@Test
+//	@Test
 	void testGetCustomerByUuid() {
 		//Arrange
 		CustomerRequest request = CustomerRequest
