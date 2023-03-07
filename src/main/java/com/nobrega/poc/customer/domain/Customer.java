@@ -3,11 +3,8 @@ package com.nobrega.poc.customer.domain;
 import com.nobrega.poc.customer.commons.DomainModelUuid;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 @Getter
@@ -17,11 +14,14 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @SuperBuilder
 @ToString
+@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
 @Table(name = "customer")
 public class Customer extends DomainModelUuid {
 
+  @EqualsAndHashCode.Include
   private String name;
 
+  @EqualsAndHashCode.Include
   private String document;
 
 }
