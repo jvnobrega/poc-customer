@@ -145,6 +145,13 @@ replay_pid*
 .DS_Store
 .AppleDouble
 .LSOverride
+*.idea
+*.iml
+*.swp
+target/
+.settings
+.classpath
+.project
 
 # Icon must end with two \r
 Icon

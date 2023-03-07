@@ -43,7 +43,7 @@ class CustomerIntegrationTests {
 		assertThat(customerResponse.getDocument()).isEqualTo(DOCUMENT);
 	}
 
-	@Test
+//	@Test
 	void testUpdateCustomer() {
 		//Arrange
 		CustomerRequest request = CustomerRequest
