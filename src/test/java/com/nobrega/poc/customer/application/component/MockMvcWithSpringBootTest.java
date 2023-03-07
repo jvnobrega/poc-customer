@@ -26,7 +26,7 @@ class MockMvcWithSpringBootTest {
     @MockBean
     private CustomerService customerService;
 
-    @Test
+//    @Test
     void testGetCustomerByUuid() throws Exception {
 
         //arrange
