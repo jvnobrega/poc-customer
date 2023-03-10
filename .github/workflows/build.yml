@@ -32,4 +32,4 @@ jobs:
         with:
           check_name: Unit Test Report
           report_paths: '**/target/surefire-reports/TEST-*.xml'
-
+      # generates coverage-report.md and publishes as checkrun

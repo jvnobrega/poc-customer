@@ -1,5 +1,6 @@
 package com.nobrega.poc.customer.domain;
 
+import com.nobrega.poc.customer.application.CustomerRequest;
 import com.nobrega.poc.customer.application.CustomerResponse;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,7 +19,10 @@ import static org.mockito.Mockito.when;
 class CustomerServiceTest {
 
     private static final String NAME = "name";
+    private static final String NEW_NAME = "newName";
     private static final String DOCUMENT = "document";
+    private static final String CUSTOMER_UUID = "customerUuid";
+
     @InjectMocks
     private CustomerService service;
     @Mock
@@ -51,4 +55,35 @@ class CustomerServiceTest {
         assertEquals(DOCUMENT, actual.getDocument());
 
     }
+
+    @Test
+    void testUpdateName_should_update_name_to_newName() {
+        Customer customerWithNewName = Customer
+                .builder()
+                .uuid(CUSTOMER_UUID)
+                .name(NEW_NAME)
+                .document(DOCUMENT)
+                .build();
+
+        when(customerRepository.findByUuid(CUSTOMER_UUID))
+                .thenReturn(Optional.of(Customer.builder()
+                        .uuid(CUSTOMER_UUID)
+                        .name(NAME)
+                        .document(DOCUMENT)
+                        .build()));
+
+        when(customerRepository.save(customerWithNewName))
+                .thenReturn(customerWithNewName);
+
+        service.update(CUSTOMER_UUID, CustomerRequest.builder()
+                .name(NEW_NAME)
+                .document(DOCUMENT)
+                .build());
+
+        verify(customerRepository)
+                .findByUuid(CUSTOMER_UUID);
+        verify(customerRepository)
+                .save(customerWithNewName);
+    }
+
 }
