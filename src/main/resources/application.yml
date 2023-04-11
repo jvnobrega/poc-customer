@@ -1,8 +1,9 @@
 server:
-  port: 8088
+  port: 8080
   error:
     include-binding-errors: always
     include-message: always
+    include-stacktrace: never
 
 application:
   title: poc-customer
@@ -26,15 +27,19 @@ spring:
     key-serializer: org.apache.kafka.common.serialization.StringSerializer
     value-serializer: org.apache.kafka.common.serialization.StringSerializer
   datasource:
-    url: jdbc:mysql://localhost:3306/customer_db
-    username: customer_user
-    password: customer_pass
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB:customer_db}?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${MYSQL_USER:customer_user}
+    password: ${MYSQL_PASSWORD:customer_pass}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate.ddl-auto: validate
     open-in-view: true
-    hibernate.use-new-id-generator-mappings: false
     show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+
+api.security.token.secret: ${JWT_SECRET:12345678}
 
 topic:
   create-customer: topic.create.customer
