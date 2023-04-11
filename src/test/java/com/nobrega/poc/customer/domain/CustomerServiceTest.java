@@ -1,7 +1,11 @@
 package com.nobrega.poc.customer.domain;
 
-import com.nobrega.poc.customer.application.CustomerRequest;
-import com.nobrega.poc.customer.application.CustomerResponse;
+import com.nobrega.poc.customer.application.request.CustomerRequest;
+import com.nobrega.poc.customer.application.response.CustomerResponse;
+import com.nobrega.poc.customer.domain.customer.Customer;
+import com.nobrega.poc.customer.domain.customer.CustomerMapper;
+import com.nobrega.poc.customer.domain.customer.CustomerRepository;
+import com.nobrega.poc.customer.domain.customer.CustomerService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

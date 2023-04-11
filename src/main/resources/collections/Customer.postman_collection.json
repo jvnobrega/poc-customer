@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "fa80f4c5-6915-473e-8e44-77f21122b25b",
+		"name": "Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25484351"
+	},
+	"item": [
+		{
+			"name": "authenticate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"victor@test.com\",\n    \"password\": \"senha\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jv Test 01\",\n    \"document\": \"313125\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customers/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJwb2MtY3VzdG9tZXIiLCJzdWIiOiJ2aWN0b3JAdGVzdC5jb20iLCJ1dWlkIjoiZGQ0NDE2ZjktOGNkOC00YzE1LWE1NDAtZGMyZTYxYWUxYjgyIiwiZXhwIjoxNjgxMjQyNjMyfQ.HKKIZK_gnh85jW65PIXiWyaQWUXtdGfHmHwnBmb9PUM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customers/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1ebd801b-ac98-438d-b578-92cac985a462"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "costumer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJwb2MtY3VzdG9tZXIiLCJzdWIiOiJ2aWN0b3JAdGVzdC5jb20iLCJ1dWlkIjoiZGQ0NDE2ZjktOGNkOC00YzE1LWE1NDAtZGMyZTYxYWUxYjgyIiwiZXhwIjoxNjgxMjQ1ODQzfQ.G_QsIHJUZyX-U48e_6g6hFgEa1jYpoPvCZ4XZQlKr6E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customers/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJwb2MtY3VzdG9tZXIiLCJzdWIiOiJ2aWN0b3JAdGVzdC5jb20iLCJ1dWlkIjoiZGQ0NDE2ZjktOGNkOC00YzE1LWE1NDAtZGMyZTYxYWUxYjgyIiwiZXhwIjoxNjgxMjQ1ODQzfQ.G_QsIHJUZyX-U48e_6g6hFgEa1jYpoPvCZ4XZQlKr6E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jv Test 02 New name\",\n    \"document\": \"313125\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customers/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1ebd801b-ac98-438d-b578-92cac985a462"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customers/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJwb2MtY3VzdG9tZXIiLCJzdWIiOiJ2aWN0b3JAdGVzdC5jb20iLCJ1dWlkIjoiZGQ0NDE2ZjktOGNkOC00YzE1LWE1NDAtZGMyZTYxYWUxYjgyIiwiZXhwIjoxNjgxMjQ1ODQzfQ.G_QsIHJUZyX-U48e_6g6hFgEa1jYpoPvCZ4XZQlKr6E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customers/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1ebd801b-ac98-438d-b578-92cac985a462"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

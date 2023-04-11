@@ -1,10 +1,9 @@
 package com.nobrega.poc.customer.application.component;
 
 
-import com.nobrega.poc.customer.application.CustomerController;
-import com.nobrega.poc.customer.application.CustomerResponse;
-import com.nobrega.poc.customer.domain.CustomerService;
-import org.junit.jupiter.api.Test;
+import com.nobrega.poc.customer.application.controller.CustomerController;
+import com.nobrega.poc.customer.application.response.CustomerResponse;
+import com.nobrega.poc.customer.domain.customer.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
